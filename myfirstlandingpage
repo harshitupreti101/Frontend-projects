@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+
+<style>
+    body{
+        width:100%;
+        margin:0;
+    }
+    #main{
+        width:100%;
+        height:100%;
+        min-height: 100vh;
+        position:relative;
+        
+    }
+    #nav{
+        width: 100%;
+        height: 8vh;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 3vw;
+        /* solid means style */
+         /*to hide the scroll bar in web page  */
+        box-sizing: border-box;
+    }
+    #nav1 i{
+        display:none;
+    }
+
+     #nav1{
+        display:flex;
+        align-items: center;
+        gap:4vw;
+    } 
+    #content{
+        width:100%;
+        height: calc(100vh - 8vh);
+        display:flex;
+    }
+    #left{
+        
+        width:50%;
+        height:100%;
+        padding:4vh 10vw 0vh 6vw;
+        position:relative;
+        box-sizing: border-box;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    #left span{
+        color:#FF725E;
+    }
+    #right{
+        width:50%;
+        height:100%;
+        box-sizing: border-box;
+    }
+    #right img{
+        height:100%;
+        width:100%;
+    }
+    
+     #left h1{
+        font-size: 2.5vw;
+    }
+
+    #explore{
+        background-color: #FF725E;
+        padding: 1.1vw;
+        margin:4vh 0px 0px 0px;
+        border-radius: 0.5vh;
+        color:white;
+        font-size: 2vh;
+        font-weight:bold;
+        border-color: #FF725E;
+    }
+    #left p{
+        font-size:1vw;
+    }
+    #nav1 button{
+        background-color: #FF725E;
+        padding: .4vw;
+        /* margin:4vh 0px 0px 0px; */
+        border-radius: 2vh;
+        color:white;
+        font-size: 2vh;
+        font-weight:bold;
+        border-color: #FF725E;
+    }
+
+    @media (max-width:600px) {
+      
+        #nav1 h4{
+             font-size: 2vw;
+             display:none;
+        }
+        #nav1 i{
+            font-size: 2.5vh;
+            font-weight: bold;
+            /* to show the icon again */
+            display:block;
+        }
+        #nav h1{
+            font-size: 1vw;
+        }
+        #explore{
+            margin:4vh 0px 0px 0px;
+            /* padding: */
+        }
+        #left h1{
+            font-size:8vw;
+        }
+        #left p{
+            font-size:2vw;
+        }
+        #nav1 button{
+            display:none;
+        }
+        #left{
+            width:100%;
+            height:50%;
+        }
+        #right{
+            width:100%;
+            height:50%;
+        }
+        #content{
+            flex-direction: column;
+        }
+
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <h2>LOGO</h2>
+            <div id="nav1">
+                <h4>Home</h4>
+                <h4>About</h4>
+                <h4>Course</h4>
+                <h4>Blog</h4>
+                <h4>Help</h4>
+                <button >Sign in</button>
+                <i class="ri-menu-3-fill"></i>
+            </div>
+        </div>
+        <div id="content">
+            <div id="left">
+                <h1>Welcome to my <span>Coolest</span> first ever landing page I have ever build</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda facere doloremque quis fuga dolore quae dignissimos distinctio, voluptatem autem similique dolorem porro quisquam?</p>
+                <button id="explore">Explore Now</button>
+            </div>
+            <div id="right">
+                <img src="codejpg.png" alt="code image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
