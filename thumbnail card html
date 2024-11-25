@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,html{
+        margin:0px;
+        width:100%;
+   }
+    .container{
+        width:100vw;
+        height:100vh;
+        background-color: black;
+        display: flex;
+        align-items:center
+    }
+    .box1{
+        width:100%;
+        height:17vw;
+        display: flex;
+        position: relative; 
+        /* justify-content: space-between; */
+    }
+    .box2{
+        width:30vw;
+        height:100%;
+        /* background-color: rgb(54, 44, 190); */
+        display: flex;
+    }
+    .box3{
+        width:calc(100% - 30vw);
+        height:100%;
+    }
+    img{
+        width:100%;
+        height: 100%;
+        border-radius: 2.4vh;
+    }
+    .box4{
+        width:100%;
+        height:21%;
+        display: flex;
+     }
+    .box5{
+        width:100%;
+        height:79%;
+        display: flex;
+        /* gap:3vw; */
+    } 
+    .box52,.box53{
+        width:5vw;
+        height:30%;
+        display:flex;
+        color:#8C8C8C;
+        font-size: 2vh;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .box51{
+        width:10vw;
+        height:30%;
+        display:flex;
+        padding:0vh 0vw 0vh 1.8vw;
+        color:#8C8C8C;
+        font-size: 2vh;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    button{
+        width:5vw;
+        height:5vh; 
+        border-color: #2d2d2b;
+        background-color:rgba(0, 0, 0, 0.6); 
+        color:white;
+        font-weight: bold;
+        font-size:3vh;
+        position: absolute;
+        margin:14vw 0vh 0vh 24vw;
+        border-radius: 0.7vh;
+        padding:.5vh 0vh 0vh 1vh;
+        display:flex;
+    }
+
+    .p1 {
+        color:white;
+        font-weight: bold;
+        display: flex;
+        padding:1.4vh 0vw 0vh 1.8vw;
+        font-size:3.4vh;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+
+</style>
+<body>
+
+    <script src="index.js"></script>
+</body>
+</html>
