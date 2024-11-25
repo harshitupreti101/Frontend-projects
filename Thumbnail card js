@@ -1,0 +1,68 @@
+function createrCard(title, cName, views, monthsOld, duration) 
+{
+      
+  let div  = document.createElement("div");
+  div.setAttribute("class","container");
+  document.querySelector("body").append(div);
+
+  let div1  = document.createElement("div");
+  div1.setAttribute("class","box1");
+  document.querySelector(".container").append(div1);
+
+  let div2  = document.createElement("div");
+  div2.setAttribute("class","box2");
+  document.querySelector(".box1").append(div2);
+
+  let div3  = document.createElement("div");
+  div3.setAttribute("class","box3");
+  document.querySelector(".box1").append(div3);
+
+  let img = document.createElement("img");
+  img.src="photo.jpg";
+  document.querySelector(".box2").append(img);
+
+  let button = document.createElement("button");
+  button.innerText = duration;
+  document.querySelector(".box2").append(button);
+
+  let div4  = document.createElement("div");
+  div4.setAttribute("class","box4");
+  document.querySelector(".box3").append(div4);
+
+  let div5  = document.createElement("div");
+  div5.setAttribute("class","box5");
+  document.querySelector(".box3").append(div5);
+
+  let div51  = document.createElement("div");
+  div51.setAttribute("class","box51");
+  document.querySelector(".box5").append(div51);
+  div51.innerHTML = cName;
+
+  let div52  = document.createElement("div");
+  div52.setAttribute("class","box52");
+  document.querySelector(".box5").append(div52);
+  div52.innerHTML = views;
+
+  let div53  = document.createElement("div");
+  div53.setAttribute("class","box53");
+  document.querySelector(".box5").append(div53);
+  div53.innerHTML = monthsOld;
+
+  let p1 = document.createElement("div");
+  p1.setAttribute("class","p1");
+  document.querySelector(".box4").append(p1);
+  document.querySelector(".p1").innerText = title;
+}
+
+  let t = prompt("Enter your title name : ");
+  let c = prompt("Enter your channel Name : ");
+  let v = prompt("Enter your  total views : ");
+  let m = prompt("Enter age of the video : ");
+  let d = prompt("Enter the duration of the video");
+
+  createrCard(t,c,v,m,d);
+
+
+
+
+
