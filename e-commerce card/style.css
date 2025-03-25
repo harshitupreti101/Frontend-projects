@@ -1,1 +1,59 @@
-rsfgdsf
+body,html {
+    height:100%;
+    width:100%;
+    margin:0px;
+}
+.container{
+    background-color: #7b7781;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+img{
+    width:130px;
+    height:110px; 
+    border-radius:15px;
+    margin-top: 15px;
+    margin-left:130px;
+    overflow: hidden;
+    display:block;
+    margin-bottom:10px;
+}
+.card{
+    background-color: #A0AECF;
+    border-radius:10px;
+    width:400px;
+    height:300px;
+}
+h1{
+    padding-left:105px;
+    color:#1E2238;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom:10px;
+}
+p{
+    padding-left:150px;
+    color:#1E2238;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;    margin-bottom:20px;
+}
+.buy{
+    margin-left:80px;
+}
+.add{
+    margin-left:100px;
+}
+.hello{
+    padding:6px;
+    border-radius:5px;
+    color:white;
+    font-weight: bold;
+    background-color: #2B5DD4;
+    border-color:#2B5DD4;
+}
+.hello:hover{
+    background-color: rgb(18, 18, 212);
+    cursor:pointer;
+}
