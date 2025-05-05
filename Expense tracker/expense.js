@@ -6,8 +6,6 @@ document.addEventListener(`DOMContentLoaded`, () => {
     const totalAmt = document.getElementById(`total-amt`);
     let expenseData = JSON.parse(localStorage.getItem(`expenseData`)) || [];
 
-    // Initial render if data exists in localStorage
-    expenseData.forEach(renderExpenses);
     updateTotal();
 
     expenseButton.addEventListener(`click`, () => {
@@ -27,7 +25,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     });
 
     function addExpenses(inputExpense, inputAmt) {
-        const dataId = Date.now(); // use unique timestamp instead of array index
+        const dataId = Date.now();
         expenseData.push({ dataId, expense: inputExpense, amount: inputAmt });
         localStorage.setItem(`expenseData`, JSON.stringify(expenseData));
         renderExpenses({ dataId, expense: inputExpense, amount: inputAmt });
