@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html {
+            height:100%;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            margin:0;
+            box-sizing: border-box;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            text-align:center;
+            font-family: sans-serif;
+        }
+        .box{
+            background-color: #1B1B1B;
+            border-radius:10px;
+        }
+        #expense-name, #amt {
+            background-color:#2F2F2F;
+            border-radius:7px;
+            padding:10px;
+            color:white;
+            font-weight: bold;
+            width:100px;
+        }
+        #expense-btn {
+            background-color:#2F2F2F;
+            border-radius:7px;
+            padding:10px;
+            background-color:#5D00E9;
+            color:white;
+            font-weight: bold;
+            width: 75px;
+            margin-right:15px;
+            text-align: center;
+        }
+        #expense-name {
+            margin-left:15px;
+        }
+        #expense-name, #amt, #expense-btn {
+            vertical-align: middle;
+        }
+        #total-amt {
+            padding-bottom:10px;  
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+        <h1>Expense Tracker</h1>
+        <div class="input">
+            <input type="text" id="expense-name" placeholder="Expense name">
+            <input type="text" id="amt" placeholder="Amount">
+            <button id="expense-btn">Add Expense</button>
+        </div>
+        <h2>Expenses</h2>
+        <div id="all-expense">
+
+        </div>
+        <div id="total-amt">Total:$0.00</div>
+    </div>
+    <script src="expense.js"></script>
 </body>
 </html>
