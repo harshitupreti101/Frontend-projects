@@ -43,8 +43,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         let wrapper = document.createElement(`div`);
         wrapper.setAttribute(`data-id`, `${data.dataId}`);
         wrapper.innerHTML = `
-            <span>${data.expense} - $${data.amount.toFixed(2)}</span>
-            <button data-id="${data.dataId}">Delete</button>
+            <span>${data.expense} - $${data.amount.toFixed(2)} <button data-id="${data.dataId}">Delete</button></span>
+            
         `;
         expenses.appendChild(wrapper);
     }
