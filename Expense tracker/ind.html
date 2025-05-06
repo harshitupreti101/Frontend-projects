@@ -25,6 +25,8 @@
         .box{
             background-color: #1B1B1B;
             border-radius:10px;
+            min-width:370px;
+            text-align:center;
         }
         #expense-name, #amt {
             background-color:#2F2F2F;
@@ -34,7 +36,7 @@
             font-weight: bold;
             width:100px;
         }
-        #expense-btn {
+        #expense-btn, #all-expense li button{
             background-color:#2F2F2F;
             border-radius:7px;
             padding:10px;
@@ -54,14 +56,33 @@
         #total-amt {
             padding-bottom:10px;  
         }
-        /* #all-expense span{
+        #all-expense li{
             background-color:#2F2F2F;
             border-radius:7px;
-            padding:10px;
             color:white;
             font-weight: bold;
-            width:100px;
-        } */
+            width:320px;
+            list-style-type:none;
+            display:flex;
+            justify-content: space-between;
+            margin:0px 35px 5px 0px;
+            align-items:center;
+            padding:5px;
+
+        }
+        #all-expense {
+            vertical-align: center;
+        }
+        #all-expense li button{
+            background-color:#2F2F2F;
+            border-radius:7px;
+            padding:7px;
+            background-color:#5D00E9;
+            color:white;
+            font-weight: bold;
+            width: 75px;
+            margin:0px 0px 0px 0px;
+        }
     </style>
 </head>
 <body>
@@ -73,9 +94,9 @@
             <button id="expense-btn">Add Expense</button>
         </div>
         <h2>Expenses</h2>
-        <div id="all-expense">
+        <ul id="all-expense">
 
-        </div>
+        </ul>
         <div id="total-amt">Total:$0.00</div>
     </div>
     <script src="i.js"></script>

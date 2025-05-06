@@ -7,6 +7,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     let expenseData = JSON.parse(localStorage.getItem(`expenseData`)) || [];
 
     updateTotal();
+    expenseData.forEach(data => renderExpenses(data));
 
     expenseButton.addEventListener(`click`, () => {
         const inputExpense = expenseName.value.trim();
@@ -40,10 +41,10 @@ document.addEventListener(`DOMContentLoaded`, () => {
     }
 
     function renderExpenses(data) {
-        let wrapper = document.createElement(`div`);
+        let wrapper = document.createElement(`li`);
         wrapper.setAttribute(`data-id`, `${data.dataId}`);
         wrapper.innerHTML = `
-            <span>${data.expense} - $${data.amount.toFixed(2)} <button data-id="${data.dataId}">Delete</button></span>        `;
+            <span>${data.expense} - $${data.amount.toFixed(2)}</span>  <button data-id="${data.dataId}">Delete</button>`;
         expenses.appendChild(wrapper);
     }
 
