@@ -1,86 +1,42 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do List</title>
-        <style>
-            body,html {
-                margin: 0%;
-                padding: 0%;    
-                height: 100%;
+document.addEventListener('DOMContentLoaded',()=>{
+    
+const input = document.getElementById(`todo-input`);
+const btn = document.getElementById(`add-task-btn`);
+const todoList = document.getElementById(`todo-list`);
+let arr = JSON.parse(localStorage.getItem(`arr`)) || []
 
-            }
-            .box{
-                width:100%;
-                height:100%;
-                background: #000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .container {
-                background-color: #151515;
-                padding: 20px;
-                border-radius: 8px;
-                color: white; 
-            }
-            h1{
-                text-align: center;
-            }
-            #todo-input{
-                background: #2F2F2F;
-                padding:6px;
-                border-radius:4px;
-                color:white
+arr.forEach(arr => {
+    renderTasks(arr);
+});
+btn.addEventListener(`click`,()=>{
+    const val = input.value.trim()
+    if (val === "") return;
+    let obj = {
+        text:val,
+        id:Date.now( ),
+        completed:false,
+    }
+    arr.push(obj);
+    saveTasks();
+    renderTasks(obj);
+    input.value = "";
+})
 
-            }
-            #add-task-btn{
-                padding:6px;
-                border-radius:8px;
-                background-color:#5F00EA;
-                color:white
-            }
-            button{
-                padding:6px;
-                border-radius:8px;
-                background-color:rgb(201, 54, 34);
-                color:white;
-            }
-            #todo-list li {
-                    background-color: #2F2F2F;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 8px;
-                    border-radius: 4px;
-                    margin-top: 6px;
-                    color: white;
-                }
-            #todo-list {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-
-        </style>
-    </head>
-
-    <body>
-        <div class="box">
-            <div class="container">
-                <h1>To-do List</h1>
-                <div class="input-container">
-                    <input type="text" id="todo-input" placeholder="Add a new task...">
-                    <button id="add-task-btn">Add task</button>
-          
-          
-          
-                </div>
-                <ul id="todo-list"></ul>
-            </div>
-            
-        </div>
-        <script src="ind.js"></script>
-    </body>
-    </html>
+function renderTasks(tasks) {
+    const li = document.createElement(`li`);
+    li.setAttribute(`data-id`,tasks.id);
+    li.innerHTML = `<span>${tasks.text}</span> <button>delete</button>
+    `
+    li.querySelector(`button`).addEventListener(`click`,(e) => {
+        e.stopPropagation();
+        arr = arr.filter ((t) => t.id !== tasks.id);
+        li.remove();
+        saveTasks();
+    }); 
+    todoList.appendChild(li);
+}
+ 
+function saveTasks() {
+    localStorage.setItem('arr',JSON.stringify(arr));
+}
+})
